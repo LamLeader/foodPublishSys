@@ -1,0 +1,10 @@
+
+首页
+127.0.0.1:8080/foodPublishSys/initIndex.do
+管理员账号密码
+18722821212/root
+普通用户
+18722821235/111111
+
+文件路径
+D:\WorkSpaces\MyProject\.metadata\.plugins\org.eclipse.wst.server.core\tmp2\wtpwebapps\foodPublishSys\fileStorage--文件保存的路径--：/foodPublishSys/fileStorage/20190522213903.png

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.OrderDao" >
+    <resultMap id="BaseResultMap" type="com.model.Order" >
+	    <id column="id" property="id" jdbcType="INTEGER" />
+	    <result column="user_id" property="user_id" jdbcType="INTEGER" />
+	    <result column="pub_id" property="pub_id" jdbcType="INTEGER" />
+	    <result column="integral_id" property="integral_id" jdbcType="INTEGER" />
+	    <result column="create_date" property="create_date" jdbcType="VARCHAR" />
+	 
+	    <result column="pub_title" property="pub_title" jdbcType="VARCHAR" />
+	    <result column="pub_content" property="pub_content" jdbcType="VARCHAR" />
+	    <result column="picture" property="picture" jdbcType="VARCHAR" />
+	    <result column="price" property="price" jdbcType="DOUBLE" />
+	    <result column="pub_type" property="pub_type" jdbcType="INTEGER" />
+	    <result column="create_date" property="create_date" jdbcType="VARCHAR" />
+	    <result column="userName" property="userName" jdbcType="VARCHAR" />
+    </resultMap>
+	 <sql id="Base_Column_List" >
+	     id,user_id,pub_id,integral_id,create_date
+	 </sql>
+	 <sql id="Base_Column_List2" >
+	     t1.id,t1.user_id,t1.pub_id,t1.integral_id,t1.create_date,
+	     t2.pub_title,t2.pub_content,t2.picture,t2.price,t2.pub_type,t2.userName
+	 </sql>
+	 <select id="getOrderInfoByOrderId"  resultMap="BaseResultMap"  resultType="com.model.Order">
+	    select <include refid="Base_Column_List2"/> 
+	    FROM tbl_order t1,tbl_publish t2 where 1=1
+	    and t1.pub_id=t2.id 
+	    <if test="orderId!='' and orderId>0 ">
+	       and   t1.id=#{orderId} 
+	    </if>
+	</select>
+	 
+	<insert id="insert" parameterType="com.model.Order" >
+	    insert into tbl_order (user_id ,pub_id,integral_id)
+	    values (#{user_id}, #{pub_id},#{integral_id})
+	</insert>
+    <select id="queryOrderInfoByUserName"  resultMap="BaseResultMap"  resultType="com.model.Order">
+	    select <include refid="Base_Column_List"/> 
+	    FROM tbl_order where 1=1
+	    <if test="user_id!='' and user_id>0 ">
+	       and   user_id=#{user_id} 
+	    </if>
+	     limit #{currentPage},#{pageSize}  
+	</select>
+	<select id="countOrderInfoByUserName"  resultType="int">
+	    select count(*)
+	     FROM tbl_order where 1=1
+	    <if test="user_id!='' and user_id>0 ">
+	       and   user_id=#{user_id} 
+	    </if>
+	</select>  
+	<select id="get"  resultMap="BaseResultMap"  resultType="com.model.Order">
+	    select *
+	    FROM tbl_order t1 where 1=1
+	    <if test="id!='' and id>0 ">
+	       and   t1.id=#{id} 
+	    </if>
+	</select>
+	 <update id="update" parameterType="com.model.Order" >
+	    update tbl_order 
+	    <set >
+	      <if test="user_id!= null and user_id>0" >
+	         user_id = #{user_id,jdbcType=INTEGER},
+	      </if>
+	      <if test="pub_id!= null and pub_id>0" >
+	         pub_id = #{pub_id,jdbcType=INTEGER},
+	      </if>
+	      <if test="integral_id!= null and integral_id>0" >
+	         integral_id = #{integral_id,jdbcType=INTEGER},
+	      </if>
+	    </set>
+	    where id = #{id}
+     </update>
+     
+      <!-- 根据id删除订单信息 -->
+    <delete id="delete" parameterType="com.model.Order">
+      <if test="id>0">
+         delete   from   tbl_order   where id=#{id}
+      </if>
+    </delete>
+</mapper>

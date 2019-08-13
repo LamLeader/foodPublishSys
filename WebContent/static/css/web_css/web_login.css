@@ -1,0 +1,78 @@
+@CHARSET "UTF-8";
+body,div,ul,li,table{
+	margin:0;
+}
+body{
+	background-color:#fafafa;
+}
+.header{
+	background-color: gray;
+	height: 80px;
+}
+.login_main_div{
+	width:700px;
+	height:400px;
+	position: absolute;
+	left:50%;
+	top:50%;
+	margin-top:-200px;
+	margin-left:-350px;
+	border-radius:10px;
+}
+
+.login_main_div_1{
+	width:500px;
+	height:300px;
+	position: absolute;
+	left:50%;
+	top:50%;
+	margin-top:-150px;
+	margin-left:-250px;
+	border-radius:10px;
+}
+.login_main_div_2{
+	width:400px;
+	height:200px;
+	position: absolute;
+	left:50%;
+	top:50%;
+	margin-top:-100px;
+	margin-left:-200px;
+	
+	border-radius:10px;
+}
+.login_input{
+	width:400px;
+	height:40px;
+	margin:10 auto;
+	border-radius:5px;
+	background-color: white;
+	padding-left:30px;
+	font-size: 23px;
+	
+}
+.login_inputs{
+	width:430px;
+	height:40px;
+	margin:10 auto;
+	border-radius:20px;
+	background-color: #ffffff;
+	border:1px solid #ffffff;
+	
+}
+.index_logo_div{
+	width:290px; 
+	height: 50px; 
+	position: absolute; 
+	left:43%; 
+	top:20%; 
+	
+}
+#submit{
+	background-color: red;
+	border:1px solid red;
+}
+#submit:hover{
+	background-color: red;
+	border:1px solid red;
+}

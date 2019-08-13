@@ -1,0 +1,240 @@
+.main_banner,.carousel-example-generic,.carousel-inner,.carousel-inner>.item,.carousel-inner>.item>img{
+    height: 460px !important;
+}
+.carousel-inner>.item>img{
+	width: 100%;
+}
+.main_login{
+	height: 460px !important;
+	width: 100% !important;
+    position: relative;
+}
+.carousel-indicators li{
+	width: 30px !important;
+	height: 5px !important;
+	background-color: #fff;
+	border: none;
+	margin: 0px 10px 0px 0px !important;
+}
+.carousel-indicators .active{
+	width: 30px !important;
+	height: 5px !important;
+	background-color: #005cd2;
+	border: none;
+}
+.loginDiv{
+	display: inline-block;
+	position: relative;
+	position: absolute;
+	width: 340px;
+	height: 385px;
+	top: 50%;
+	margin-top: -180px;
+	left: 50%;
+    margin-left: 90px;
+	background-color: #fff;
+	padding-bottom: 10px;
+	border-radius: 10px;
+	transition-duration: .3s;
+}
+.loginDiv>.loginTitle{
+	height: 60px;
+	background-color: #005cd2;
+	line-height: 60px;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	color: #fff;
+	position: relative;
+	border-radius: 5px 5px 0px 0px;
+}
+.loginDiv>div:nth-child(1)>img{
+	display: inline-block;width: 35px;height: 35px;margin-right: 10px;margin-top: -10px;
+}
+.loginDiv>.loginTitle>span{
+	font-size: 24px;
+}
+.loginDiv>div:nth-child(1):after{
+	position: absolute;
+	content: '';
+	bottom: -5px;
+	left: 0px;
+	width: 100%;
+	height: 3px;
+	background-color: #41414d;
+	display: none;
+}
+.loginDiv>.formLogin>ul{
+	width: 100%;
+	padding: 0 !important;
+}
+.loginDiv>.formLogin>ul>li{
+	width: 286px;
+	height: 45px;
+	position: relative;
+	margin: 6px auto;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+.hidden-placeholder{width:235px;height: 40px;line-height: 40px;color:#999;font-size: 14px;position: absolute;left:42px;top:0;z-index: 0;}
+.hidden-placeholder-code{width:100px}
+.loginDiv>.formLogin>ul>li.lis{
+	margin-top: 15px;
+	border:2px solid #cccccc;
+	font-size: 0;
+}
+.loginDiv>.formLogin>ul>li.lis>span{
+	display: inline-block;
+	width: 42px;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 40px;
+	color: #1eb1e7;
+}
+.loginDiv>.formLogin>ul>li.li1>input{
+	display: inline-block;
+	width:236px;
+	line-height: 39px;
+	border: none;
+	background-color: transparent;
+	outline: none;
+	font-size: 14px;
+	height: 39px;
+	position: absolute;
+	left:42px;
+	top:0;
+	z-index: 4;
+}
+.loginDiv>.formLogin>ul>li.li2>input{
+	display: inline-block;
+	border: none;
+	width:115px;
+	line-height: 39px;
+	background-color: transparent;
+	outline: none;
+	color:#666;
+	font-size: 14px;
+	height: 39px;
+	
+}
+
+.loginDiv>.formLogin>ul>li.li2>cite img{
+	width: 100px;
+    float: right;
+    margin:5px 5px 0 0;
+}
+.loginDiv>.formLogin>ul>li button.pull-right{
+	margin-top: 3.5px;
+}
+.loginDiv>.formLogin>ul>li.liImg>img{
+	position: absolute;
+	display: inline-block;
+	width: 100px;
+	height: 43px;
+	top: 0px;
+	right: 1px;
+	border-radius: 3px;
+}
+.login_li{
+	width: 286px;
+    height: 45px;
+    position: relative;
+    margin: 6px auto;
+}
+.login_li>a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 45px;
+	text-align: center;
+	cursor: pointer;
+	color: #fff !important;
+	border: none !important;
+	border-radius: 5px;
+	font-size: 15px;
+	background-color: #5eb9ff !important;
+}
+.login_li>a{
+	color: #fff !important;
+	text-decoration: none;
+}
+.formLogin ul p{
+	width: 100%;
+	height: 40px;
+	position: relative;
+	padding: 0 1px;
+}
+.formLogin ul p:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+	height: 1px;
+	z-index: 9;
+	width: 100%;
+}
+.formLogin ul p span{
+	width: 33.33333%;
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	float: left;
+	font-size: 16px;
+	color: #333;
+	transition-duration: .3s;
+	cursor: pointer;
+}
+.formLogin ul p span.active{
+	background: #369;
+	color: #fff;
+}
+
+.changeBtn{
+	position: absolute;
+	width:38px;
+	height: 300px;
+	border-radius: 5px 0px 0px 5px;
+	right: 100%;
+	top: 60px;
+	background-color: #FFFFFF;
+	
+}
+.changeBtn .login-button{
+	display: block;
+	width: 100%;
+	height: 150px;
+	transition-duration: .3s;
+	color: #999999;
+	font-size: 14px;
+	cursor: pointer;
+	
+	
+}
+
+.changeBtn .login-button.active{
+	background-color: #E06C0F;
+	color: #FFFFFF;
+}
+.changeBtn .login-button .iconfont{
+	word-break: break-word;
+    display: block;
+    padding: 0 5px;
+    padding-top: 10px;
+    height: 100%;
+    text-align: center;
+    line-height: 24px;
+    line-height: 18px\9;
+    font-weight: bold;
+}
+
+.changeBtn .login-button .iconfont:before{
+	margin-right: 3px;
+}
+.changeBtn a:first-child{
+	border-radius: 5px 0px 0px 0px;
+}
+.changeBtn a:last-child{
+	border-radius: 0px 0px 0px 5px;
+}
